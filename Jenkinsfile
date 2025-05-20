@@ -1,7 +1,14 @@
-node {
-    stage "Create build output"
-    
-    // Make the output directory.
-    sh "echo Hello"
-    sh "free -h"
+pipeline {
+
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        timeout(time: 1, unit: 'SECONDS')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
 }
