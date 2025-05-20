@@ -1,16 +1,7 @@
-pipeline {
-
-  agent ""
-  stages {
-    stage ('build'){
-        steps {
-          echo "hello"
-        }
-    stage ('test') {
-        steps {
-              echo "executed"
-        }
-    }
-    }
-  }
+node {
+    stage "Create build output"
+    
+    // Make the output directory.
+    sh "echo Hello"
+    sh "free -h"
 }
