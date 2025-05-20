@@ -13,6 +13,8 @@ hostnamectl
 # network checking
 ping www.google.com
 
+echo "all commands working fine"
+
 
 
 
